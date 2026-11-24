@@ -11,21 +11,41 @@ Tools: Azure Portal, Azure CLI, PowerShell.
 Access Level: Reader access in a live, multi-user Azure training tenant. No administrative permissions or ability to modify tenant configurations.
 
 ## Investigation
-1. Reviewed Privileged Identity Management (PIM)
+
+1. Investigated Role Assignments
+
+I reviewed the role assignment information using the downloaded spreadsheet in Google Sheets. I focused on identifying users with the Owner role and examining their role assignment details.
+
+During the investigation, I found information in the Role Assignment Description field. This demonstrated why it is important to review assignment descriptions instead of only looking at role names and permissions. <img width="665" height="599" alt="image" src="https://github.com/user-attachments/assets/7d549b4d-d8ec-42a2-9906-2068b9880e5a" />
+
+
+2. Identified an Orphaned Account
+
+For the next investigation, I opened the downloaded JSON file and reviewed the role assignment information.
+
+I noticed that the Principal Name field was blank, indicating that the account associated with the role assignment could no longer be resolved.
+
+I then examined the Description field and discovered the following flag:
+
+MadHat{oRpHanEd_aCCouNtS_aRe_pRoBleMs}
+
+This finding highlighted the security risks associated with orphaned accounts and the importance of regularly reviewing role assignments to identify permissions associated with deleted or unavailable identities.<img width="975" height="294" alt="image" src="https://github.com/user-attachments/assets/84e2d10d-7acf-41d0-aaf3-ae73e875fa6f" />
+
+3. Reviewed Privileged Identity Management (PIM)
 
 I started by navigating to Privileged Identity Management in Azure to review the available eligible roles. I found the rg-madhatlabs-hidden-pim resource group assignment and activated the eligible role so I could investigate the resource group. <img width="1664" height="562" alt="Screenshot 2026-11-11 122815" src="https://github.com/user-attachments/assets/f4db4b5a-5749-49ed-976f-f55c880dde70" />
 
-2. Located the hidden PIM resource group
+4. Located the hidden PIM resource group
 
 After activating the role, I returned to Resource Groups and located rg-madhatlabs-hidden-pim. This confirmed that the resource group was available for further investigation.<img width="1726" height="758" alt="Screenshot 2026-11-11 123441" src="https://github.com/user-attachments/assets/d2de0f7e-d502-4ee2-a32a-d663986b8966" />
 
-3. Investigated the role assignments
+5. Investigated the role assignments
 
 I opened the hidden PIM resource group and downloaded its role assignment information. While reviewing the assignments, I found the lab flag inside the Role Assignment Description field.
 
 <img width="1147" height="519" alt="image" src="https://github.com/user-attachments/assets/3953a509-7130-4554-b317-dbd2f4ede98b" />
 
-4. Recorded the finding
+6. Recorded the finding
 
 I documented the recovered flag and identified the role assignment description as the location where the security team had hidden the information. This demonstrated the importance of reviewing role assignment details rather than only looking at role names and permissions.
 
