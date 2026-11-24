@@ -40,6 +40,33 @@ What surprised me was that I was actually doing everything correctly in Part 5 u
 This experience taught me that completing a technical task isn't just about following instructions. It's also important to understand the tools you're using and the data you're collecting. I still need to improve my understanding of JSON and CSV formats, but I now recognize why choosing the correct file format matters when working with exported data.
 
 
+What would happen if this weren't taken care of. 
+Without Privileged Identity Management (PIM), employees may have permanent elevated permissions instead of only receiving them when needed. This increases the risk of unauthorized access, compromised accounts, and accidental changes to critical resources. For example, an intern or former employee could retain administrative permissions and potentially modify or delete production resources.
+
+
+If interns or even senior employees deploy resources without properly reviewing them, they could accidentally introduce security vulnerabilities into the company's production environment
+
+Fixes 
+
+Organizations can protect their Azure environment by regularly reviewing user permissions, implementing PIM, enforcing least-privilege access, and reviewing deployments before they reach production. Azure Policy and continuous monitoring can help prevent misconfigurations and detect suspicious activity.
+
+
+What could happen?
+- Storage accounts could be publicly accessible.
+- Databases could be exposed to the internet.
+- Virtual machines could have unnecessary open ports.
+- Sensitive information could accidentally be exposed.
+- Resources could be deployed without encryption or proper monitoring.
+
+
+
+
+
+
+
+
+
+
 ## Findings and recommendations
 What I determined:
 
