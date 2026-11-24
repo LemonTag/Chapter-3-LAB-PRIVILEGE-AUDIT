@@ -31,21 +31,30 @@ MadHat{oRpHanEd_aCCouNtS_aRe_pRoBleMs}
 
 This finding highlighted the security risks associated with orphaned accounts and the importance of regularly reviewing role assignments to identify permissions associated with deleted or unavailable identities.<img width="975" height="294" alt="image" src="https://github.com/user-attachments/assets/84e2d10d-7acf-41d0-aaf3-ae73e875fa6f" />
 
-3. Reviewed Privileged Identity Management (PIM)
+3. Reviewed Role Assignments
+I navigated to Privileged Identity Management (PIM) in Azure and selected the rg-madhatlabs-rbac resource group.
+I reviewed the available role assignments and exported the assignment information so I could examine the users, groups, and permissions associated with the resource group. <img width="438" height="389" alt="image" src="https://github.com/user-attachments/assets/0f71ff74-3244-4e14-93e9-8341e66eb7d5" />
+
+4. Exported and Reviewed the Audit Report
+Next, I exported the audit report to investigate the activity associated with the resource group.
+I reviewed the report to identify the users and groups involved in the recorded activities. I specifically looked for the account associated with the deletion action.
+This helped me investigate who performed the action and understand why reviewing audit logs is important when tracking changes to Azure resources. <img width="1232" height="549" alt="image" src="https://github.com/user-attachments/assets/15c4a61f-98cd-44ad-a4ab-6c129a9d6bfb" />
+
+5. Reviewed Privileged Identity Management (PIM)
 
 I started by navigating to Privileged Identity Management in Azure to review the available eligible roles. I found the rg-madhatlabs-hidden-pim resource group assignment and activated the eligible role so I could investigate the resource group. <img width="1664" height="562" alt="Screenshot 2026-11-11 122815" src="https://github.com/user-attachments/assets/f4db4b5a-5749-49ed-976f-f55c880dde70" />
 
-4. Located the hidden PIM resource group
+6. Located the hidden PIM resource group
 
 After activating the role, I returned to Resource Groups and located rg-madhatlabs-hidden-pim. This confirmed that the resource group was available for further investigation.<img width="1726" height="758" alt="Screenshot 2026-11-11 123441" src="https://github.com/user-attachments/assets/d2de0f7e-d502-4ee2-a32a-d663986b8966" />
 
-5. Investigated the role assignments
+7. Investigated the role assignments
 
 I opened the hidden PIM resource group and downloaded its role assignment information. While reviewing the assignments, I found the lab flag inside the Role Assignment Description field.
 
 <img width="1147" height="519" alt="image" src="https://github.com/user-attachments/assets/3953a509-7130-4554-b317-dbd2f4ede98b" />
 
-6. Recorded the finding
+8. Recorded the finding
 
 I documented the recovered flag and identified the role assignment description as the location where the security team had hidden the information. This demonstrated the importance of reviewing role assignment details rather than only looking at role names and permissions.
 
