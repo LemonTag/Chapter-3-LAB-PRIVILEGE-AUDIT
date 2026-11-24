@@ -22,9 +22,7 @@ During the investigation, I found information in the Role Assignment Description
 2. Identified an Orphaned Account
 
 For the next investigation, I opened the downloaded JSON file and reviewed the role assignment information.
-
 I noticed that the Principal Name field was blank, indicating that the account associated with the role assignment could no longer be resolved.
-
 I then examined the Description field and discovered the following flag:
 
 MadHat{oRpHanEd_aCCouNtS_aRe_pRoBleMs}
