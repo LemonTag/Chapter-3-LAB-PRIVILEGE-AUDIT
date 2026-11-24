@@ -31,7 +31,9 @@ This finding highlighted the security risks associated with orphaned accounts an
 
 3. Reviewed Role Assignments
 I navigated to Privileged Identity Management (PIM) in Azure and selected the rg-madhatlabs-rbac resource group.
-I reviewed the available role assignments and exported the assignment information so I could examine the users, groups, and permissions associated with the resource group. <img width="438" height="389" alt="image" src="https://github.com/user-attachments/assets/0f71ff74-3244-4e14-93e9-8341e66eb7d5" />
+I reviewed the available role assignments and exported the assignment information so I could examine the users, groups, and permissions associated with the resource group. 
+<img width="438" height="389" alt="image" src="https://github.com/user-attachments/assets/0f71ff74-3244-4e14-93e9-8341e66eb7d5" />
+
 
 4. Exported and Reviewed the Audit Report
 Next, I exported the audit report to investigate the activity associated with the resource group.
